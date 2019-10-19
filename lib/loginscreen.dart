@@ -51,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
         child: Scaffold(
           resizeToAvoidBottomPadding: false,
           body: new Container(
-            padding: EdgeInsets.all(30.0),
+            padding: EdgeInsets.all(25.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -59,24 +59,51 @@ class _LoginPageState extends State<LoginPage> {
                   'assets/images/splash.png',
                   scale: 1.5,
                 ), //Image.asset
-                TextField(
-                    controller: _emailcontroller,
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                        labelText: 'Email',
-                        icon: Icon(Icons.email)) //InputDecoration
-                    ), //TextField
-                TextField(
-                  controller: _passwordcontroller,
-                  decoration: InputDecoration(
-                      labelText: 'Password',
-                      icon: Icon(Icons.lock)), //InputDecoration
-                  obscureText: _obscureText,
-                ), //TextField
-                new FlatButton(
-                    onPressed: _toggle,
-                    child:
-                        new Text(_obscureText ? "Show" : "Hide")), //FlatButton//SizedBox
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(14.0, 8.0, 14.0, 8.0),
+                  child: Material(
+                    borderRadius: BorderRadius.circular(10.0),
+                    color: Colors.grey.withOpacity(0.2),
+                    elevation: 0.0,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 12.0),
+                      child: TextField(
+                        controller: _emailcontroller,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Email",
+                          icon: Icon(Icons.email),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(14.0, 8.0, 14.0, 15.0),
+                  child: Material(
+                    borderRadius: BorderRadius.circular(10.0),
+                    color: Colors.grey.withOpacity(0.2),
+                    elevation: 0.0,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 12.0),
+                      child: TextField(
+                        controller: _passwordcontroller,
+                        obscureText: _obscureText,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Password",
+                          icon: Icon(Icons.lock),
+                          suffixIcon: IconButton(
+                              icon: Icon(Icons.lock_open),
+                              onPressed: () {
+                                debugPrint('done');
+                                _toggle();
+                              }),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
                 MaterialButton(
                   shape: RoundedRectangleBorder(
                       borderRadius:
@@ -90,7 +117,7 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: _onLogin,
                 ), //MaterialButton
                 SizedBox(
-                  height: 10,
+                  height: 5,
                 ), //SizedBox
                 Row(
                   children: <Widget>[
