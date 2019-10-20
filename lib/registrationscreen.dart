@@ -136,7 +136,7 @@ class RegisterWidgetState extends State<RegisterWidget> {
         ), //SizedBox
         GestureDetector(
             onTap: _onBackPress,
-            child: Text('Already Register', style: TextStyle(fontSize: 16))),
+            child: Text('Already Registered', style: TextStyle(fontSize: 16))),
       ], //<Widget>
     ); //Column
   }

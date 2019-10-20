@@ -20,7 +20,7 @@ class LoginScreen extends StatelessWidget {
         statusBarIconBrightness: Brightness.dark));
     return MaterialApp(
       home: LoginPage(),
-    ); //MaterialApp
+    ); 
   }
 }
 
@@ -57,8 +57,8 @@ class _LoginPageState extends State<LoginPage> {
               children: <Widget>[
                 Image.asset(
                   'assets/images/splash.png',
-                  scale: 1.5,
-                ), //Image.asset
+                  scale: 1.0,
+                ), 
                 Padding(
                   padding: const EdgeInsets.fromLTRB(14.0, 8.0, 14.0, 8.0),
                   child: Material(
@@ -79,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(14.0, 8.0, 14.0, 15.0),
+                  padding: const EdgeInsets.fromLTRB(14.0, 8.0, 14.0, 5.0),
                   child: Material(
                     borderRadius: BorderRadius.circular(10.0),
                     color: Colors.grey.withOpacity(0.2),
@@ -88,37 +88,28 @@ class _LoginPageState extends State<LoginPage> {
                       padding: const EdgeInsets.only(left: 12.0),
                       child: TextField(
                         controller: _passwordcontroller,
-                        obscureText: _obscureText,
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: "Password",
                           icon: Icon(Icons.lock),
-                          suffixIcon: IconButton(
-                              icon: Icon(Icons.lock_open),
-                              onPressed: () {
-                                debugPrint('done');
-                                _toggle();
-                              }),
+                          suffixIcon: GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                _obscureText = !_obscureText;
+                              });
+                            },
+                            child: Icon(
+                              _obscureText
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
+                            ),
+                          ),
                         ),
+                        obscureText: _obscureText,
                       ),
                     ),
                   ),
                 ),
-                MaterialButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.circular(20.0)), //RoundedRectangleBorder
-                  minWidth: 300,
-                  height: 50,
-                  child: Text('Login'),
-                  color: Color.fromRGBO(61, 168, 134, 1),
-                  textColor: Colors.white,
-                  elevation: 15,
-                  onPressed: _onLogin,
-                ), //MaterialButton
-                SizedBox(
-                  height: 5,
-                ), //SizedBox
                 Row(
                   children: <Widget>[
                     Checkbox(
@@ -126,26 +117,41 @@ class _LoginPageState extends State<LoginPage> {
                       onChanged: (bool value) {
                         _onChange(value);
                       },
-                    ), //Checkbox
+                    ), 
                     Text('Remember Me', style: TextStyle(fontSize: 16))
-                  ], //<Widget>[]
-                ), //Row
+                  ], 
+                ), 
+                MaterialButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.circular(20.0)),
+                  minWidth: 300,
+                  height: 50,
+                  child: Text('Login'),
+                  color: Color.fromRGBO(61, 168, 134, 1),
+                  textColor: Colors.white,
+                  elevation: 15,
+                  onPressed: _onLogin,
+                ), 
+                SizedBox(
+                  height: 10,
+                ),
                 GestureDetector(
                     onTap: _onRegister,
                     child: Text('Register New Account',
-                        style: TextStyle(fontSize: 16)) //Text
-                    ), //GestureDetector
+                        style: TextStyle(fontSize: 16)) 
+                    ), 
                 SizedBox(
                   height: 10,
-                ), //SizedBox
+                ), 
                 GestureDetector(
                     onTap: _onForgot,
                     child:
                         Text('Forgot Account', style: TextStyle(fontSize: 16))),
-              ], //<Widget>
-            ), //Column
-          ), //Container
-        ) //Scaffold
+              ], 
+            ), 
+          ), 
+        ) 
         );
   }
 
@@ -211,18 +217,12 @@ class _LoginPageState extends State<LoginPage> {
       setState(() {
         _isChecked = true;
       });
-    } else {
+    } else if (_email.length <1){
       print('No pref');
       setState(() {
         _isChecked = false;
       });
     }
-  }
-
-  void _toggle() {
-    setState(() {
-      _obscureText = !_obscureText;
-    });
   }
 
   void savepref(bool value) async {

@@ -19,13 +19,13 @@ class SplashScreen extends StatelessWidget {
               Image.asset(
                 'assets/images/splash.png',
                 scale: 1,
-              ), //Image.asset
+              ), 
               new ProgressIndicator(),
-            ], //<Widget>
-          ), //Column
-        ), //Center
-      ), //Scaffold
-    ); //MaterialApp
+            ], 
+          ), 
+        ), 
+      ), 
+    ); 
   }
 }
 class ProgressIndicator extends StatefulWidget{
@@ -50,7 +50,7 @@ with SingleTickerProviderStateMixin{
             Navigator.pushReplacement(context, 
             MaterialPageRoute(
               builder: (BuildContext context) =>LoginScreen()
-              )//MaterialPageRoute
+              )
               );   
                 controller.dispose();      
                 }
