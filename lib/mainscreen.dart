@@ -10,24 +10,26 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  List<Widget> tabs;
 
-  int currentTabIndex = 0;
-
-  String $pagetitle = "Home";
-
-  onTapped(int index) {
-    setState(() {
-      currentTabIndex = index;
-    });
-  }
+  String $pagetitle = "MyExpress";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text($pagetitle),
+        
       ),
+      body: new Container(
+        child: Center(
+            child: Column(
+              children: <Widget>[
+                Text(widget.email),
+                            ]
+      ),
+    ),
+    ),
     );
+
   }
 }

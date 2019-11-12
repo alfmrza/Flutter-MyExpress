@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:my_express/mainscreen.dart';
 import 'package:my_express/registrationscreen.dart';
+import 'package:my_express/forgotpassword.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toast/toast.dart';
 import 'package:http/http.dart' as http;
@@ -16,11 +17,10 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
-        statusBarBrightness: Brightness.dark,
         statusBarIconBrightness: Brightness.dark));
     return MaterialApp(
       home: LoginPage(),
-    ); 
+    );
   }
 }
 
@@ -49,6 +49,7 @@ class _LoginPageState extends State<LoginPage> {
     return WillPopScope(
         onWillPop: _onBackPressAppBar,
         child: Scaffold(
+          backgroundColor: Colors.white,
           resizeToAvoidBottomPadding: false,
           body: new Container(
             padding: EdgeInsets.all(25.0),
@@ -58,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                 Image.asset(
                   'assets/images/splash.png',
                   scale: 1.0,
-                ), 
+                ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(14.0, 8.0, 14.0, 8.0),
                   child: Material(
@@ -117,14 +118,13 @@ class _LoginPageState extends State<LoginPage> {
                       onChanged: (bool value) {
                         _onChange(value);
                       },
-                    ), 
+                    ),
                     Text('Remember Me', style: TextStyle(fontSize: 16))
-                  ], 
-                ), 
+                  ],
+                ),
                 MaterialButton(
                   shape: RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.circular(20.0)),
+                      borderRadius: BorderRadius.circular(20.0)),
                   minWidth: 300,
                   height: 50,
                   child: Text('Login'),
@@ -132,27 +132,25 @@ class _LoginPageState extends State<LoginPage> {
                   textColor: Colors.white,
                   elevation: 15,
                   onPressed: _onLogin,
-                ), 
+                ),
                 SizedBox(
                   height: 10,
                 ),
                 GestureDetector(
                     onTap: _onRegister,
                     child: Text('Register New Account',
-                        style: TextStyle(fontSize: 16)) 
-                    ), 
+                        style: TextStyle(fontSize: 16))),
                 SizedBox(
                   height: 10,
-                ), 
+                ),
                 GestureDetector(
                     onTap: _onForgot,
                     child:
-                        Text('Forgot Account', style: TextStyle(fontSize: 16))),
-              ], 
-            ), 
-          ), 
-        ) 
-        );
+                        Text('Forgot Password', style: TextStyle(fontSize: 16))),
+              ],
+            ),
+          ),
+        ));
   }
 
   void _onLogin() {
@@ -172,10 +170,11 @@ class _LoginPageState extends State<LoginPage> {
             duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
         if (res.body == "success") {
           pr.dismiss();
-          Navigator.push(
+          Navigator.pushReplacement(
               context,
               MaterialPageRoute(
-                  builder: (context) => MainScreen(email: _email)));
+                  builder: (BuildContext context) => 
+                  MainScreen(email: _email)));
           pr.dismiss();
         } else {
           pr.dismiss();
@@ -195,6 +194,8 @@ class _LoginPageState extends State<LoginPage> {
 
   void _onForgot() {
     print('Forgot');
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => ForgotPassScreen()));
   }
 
   void _onChange(bool value) {
@@ -217,7 +218,7 @@ class _LoginPageState extends State<LoginPage> {
       setState(() {
         _isChecked = true;
       });
-    } else if (_email.length <1){
+    } else if (_email.length < 1) {
       print('No pref');
       setState(() {
         _isChecked = false;

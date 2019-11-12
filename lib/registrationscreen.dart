@@ -19,6 +19,7 @@ final TextEditingController _passcontroller = TextEditingController();
 final TextEditingController _phcontroller = TextEditingController();
 String _name, _email, _password, _phone;
 const PrimaryColor = const Color(0xFF3da886);
+
 class RegisterScreen extends StatefulWidget {
   @override
   _RegisterUserState createState() => _RegisterUserState();
@@ -34,7 +35,6 @@ class _RegisterUserState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      
       onWillPop: _onBackPressAppBar,
       child: Scaffold(
         resizeToAvoidBottomPadding: false,
@@ -74,7 +74,7 @@ class RegisterWidgetState extends State<RegisterWidget> {
     return Column(
       children: <Widget>[
         GestureDetector(
-            onTap: _choose,
+            onTap: _camera,
             child: Container(
               width: 180,
               height: 200,
@@ -89,7 +89,7 @@ class RegisterWidgetState extends State<RegisterWidget> {
                   ), //BoxDecoration
             ) //Container
             ), //GestureDetector
-        Text('Click on image above to take profile picture'),
+            Text("Click the image above to take/choose a picture"),
         TextField(
             controller: _emcontroller,
             keyboardType: TextInputType.emailAddress,
@@ -141,10 +141,41 @@ class RegisterWidgetState extends State<RegisterWidget> {
     ); //Column
   }
 
-  void _choose() async {
-    _image = await ImagePicker.pickImage(source: ImageSource.camera);
-    setState(() {});
-    //_image = await ImagePicker.pickImage(source: ImageSource.gallery);
+  void _camera() async {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("Choose"),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                GestureDetector(
+                  child: Text("Gallery"),
+                  onTap: () async {
+                    _image = await ImagePicker.pickImage(
+                        source: ImageSource.gallery);
+                        setState(() {});
+                        Navigator.of(context).pop();
+                  }, 
+                ),
+                Padding(padding: EdgeInsets.all(8.0),),
+                GestureDetector(
+                  child: Text("Camera"),
+                  onTap: () async {
+                    _image = await ImagePicker.pickImage(
+                        source: ImageSource.camera);
+                        setState(() {});
+                        Navigator.of(context).pop();
+                  },
+                ),
+              ],
+            ),
+            
+          ),
+        );
+      },
+    );
   }
 
   void _onRegister() {
