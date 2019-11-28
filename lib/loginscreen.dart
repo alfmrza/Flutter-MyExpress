@@ -174,7 +174,7 @@ class _LoginPageState extends State<LoginPage> {
               context,
               MaterialPageRoute(
                   builder: (BuildContext context) => 
-                  MainScreen(email: _email)));
+                  MainScreen()));
           pr.dismiss();
         } else {
           pr.dismiss();
