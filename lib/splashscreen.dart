@@ -14,10 +14,10 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: Colors.greenAccent));
+        SystemUiOverlayStyle(statusBarColor: Color.fromRGBO(61, 168, 134, 1)));
     return MaterialApp(
       theme: new ThemeData(
-        primaryColor: Colors.lightGreenAccent,
+        primaryColor: Color.fromRGBO(61, 168, 134, 1),
         primarySwatch: Colors.green,
         accentColor: Colors.greenAccent,
       ),

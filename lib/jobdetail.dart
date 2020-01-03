@@ -1,13 +1,17 @@
 import 'dart:async';
 import 'package:flutter/services.dart';
-import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:my_express/user.dart';
-import 'package:toast/toast.dart';
-import 'package:progress_dialog/progress_dialog.dart';
 import 'package:my_express/job.dart';
 import 'package:my_express/mainscreen.dart';
+import 'package:toast/toast.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:http/http.dart' as http;
+
+String urlupdate =
+    "http://alifmirzaandriyanto.com/myexpress/php/update_status.php";
+String _value;
 
 class JobDetail extends StatefulWidget {
   final Job job;
@@ -23,14 +27,14 @@ class _JobDetailState extends State<JobDetail> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: Colors.green[300]));
+       SystemUiOverlayStyle(statusBarColor: Color.fromRGBO(61, 168, 134, 1)));
     return WillPopScope(
       onWillPop: _onBackPressAppBar,
       child: Scaffold(
           resizeToAvoidBottomPadding: false,
           appBar: AppBar(
             title: Text('JOB DETAILS'),
-            backgroundColor: Colors.green[300],
+            backgroundColor: Color.fromRGBO(61, 168, 134, 1),
           ),
           body: SingleChildScrollView(
             child: Container(
@@ -113,7 +117,7 @@ class _DetailInterfaceState extends State<DetailInterface> {
                 TableRow(children: [
                   Text("Job Description",
                       style: TextStyle(fontWeight: FontWeight.bold)),
-                  Text(widget.job.jobdes),
+                  Text(widget.job.jobdesc),
                 ]),
                 TableRow(children: [
                   Text("Job Price",
@@ -147,11 +151,11 @@ class _DetailInterfaceState extends State<DetailInterface> {
               Container(
                 width: 350,
                 //MapSample(),
-              )
+              ),
             ],
           ),
         ),
       ],
     );
   }
-  }
+}

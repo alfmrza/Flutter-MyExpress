@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:my_express/mainscreen.dart';
 import 'package:my_express/registrationscreen.dart';
 import 'package:my_express/forgotpassword.dart';
+import 'package:my_express/user.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toast/toast.dart';
 import 'package:http/http.dart' as http;
@@ -166,16 +167,20 @@ class _LoginPageState extends State<LoginPage> {
         "password": _password,
       }).then((res) {
         print(res.statusCode);
-        Toast.show(res.body, context,
+        var string = res.body;
+        List dres = string.split(",");
+        print(dres);
+        Toast.show(dres[0], context,
             duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
-        if (res.body == "success") {
+        if (dres[0] == "success") {
           pr.dismiss();
-          Navigator.pushReplacement(
+          print("Radius:");
+          print(dres);
+         User user = new User(name:dres[1],email: dres[2],phone:dres[3],radius: dres[4],credit: dres[5],rating: dres[6]);
+          Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (BuildContext context) => 
-                  MainScreen()));
-          pr.dismiss();
+                  builder: (context) => MainScreen(user: user)));
         } else {
           pr.dismiss();
         }
@@ -218,7 +223,7 @@ class _LoginPageState extends State<LoginPage> {
       setState(() {
         _isChecked = true;
       });
-    } else if (_email.length < 1) {
+    } else {
       print('No pref');
       setState(() {
         _isChecked = false;
@@ -232,6 +237,7 @@ class _LoginPageState extends State<LoginPage> {
     _password = _passwordcontroller.text;
     SharedPreferences prefs = await SharedPreferences.getInstance();
     if (value) {
+      //true save pref
       if (_isEmailValid(_email) && (_password.length > 5)) {
         await prefs.setString('email', _email);
         await prefs.setString('pass', _password);

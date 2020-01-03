@@ -41,7 +41,7 @@ class _TabScreenState extends State<TabScreen> {
   Widget build(BuildContext context) {
     
    SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: Colors.green[300]));
+        SystemUiOverlayStyle(statusBarColor: Color.fromRGBO(61, 168, 134, 1)));
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
@@ -49,7 +49,7 @@ class _TabScreenState extends State<TabScreen> {
   
             body: RefreshIndicator(
               key: refreshKey,
-              color: Colors.green[300],
+              color: Color.fromRGBO(61, 168, 134, 1),
               onRefresh: () async {
                 await refreshList();
               },
@@ -63,7 +63,7 @@ class _TabScreenState extends State<TabScreen> {
                           children: <Widget>[
                             Stack(children: <Widget>[
                               Image.asset(
-                                "assets/images/background.jpg",
+                                "assets/images/background.png",
                                 fit: BoxFit.fitWidth,
                               ),
                               Column(
@@ -164,7 +164,7 @@ class _TabScreenState extends State<TabScreen> {
                                                 Flexible(
                                                   child: Text("You have " +
                                                       widget.user.credit +
-                                                      " Credit"),
+                                                      " Points"),
                                                 ),
                                               ],
                                             ),
@@ -180,9 +180,9 @@ class _TabScreenState extends State<TabScreen> {
                               height: 4,
                             ),
                             Container(
-                              color: Colors.green[300],
+                              color: Color.fromRGBO(61, 168, 134, 1),
                               child: Center(
-                                child: Text("Jobs completed",
+                                child: Text("Jobs Posted",
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold,
@@ -241,7 +241,7 @@ class _TabScreenState extends State<TabScreen> {
                                       image: DecorationImage(
                                     fit: BoxFit.fill,
                                     image: NetworkImage(
-                                    "http://alifmirzaandriyanto.com/mydriver/images/${data[index]['jobimage']}.jpg"
+                                    "http://alifmirzaandriyanto.com/myexpress/images/${data[index]['jobimage']}.jpg"
                                   )))),
                                 Expanded(
                                   child: Container(
@@ -292,6 +292,7 @@ class _TabScreenState extends State<TabScreen> {
     geolocator
         .getCurrentPosition(desiredAccuracy: LocationAccuracy.best)
         .then((Position position) {
+          if (!mounted) return;
       setState(() {
         _currentPosition = position;
         print(_currentPosition);
@@ -308,7 +309,7 @@ class _TabScreenState extends State<TabScreen> {
           _currentPosition.latitude, _currentPosition.longitude);
 
       Placemark place = p[0];
-
+if (!mounted) return;
       setState(() {
         _currentAddress =
             "${place.name},${place.locality}, ${place.postalCode}, ${place.country}";
@@ -320,7 +321,7 @@ class _TabScreenState extends State<TabScreen> {
   }
 
   Future<String> makeRequest() async {
-    String urlLoadJobs = "http://alifmirzaandriyanto.com/mydriver/php/load_job_user.php";
+    String urlLoadJobs = "http://alifmirzaandriyanto.com/myexpress/php/load_jobs.php";
     ProgressDialog pr = new ProgressDialog(context,
         type: ProgressDialogType.Normal, isDismissible: false);
     pr.style(message: "Loading Jobs");
@@ -331,6 +332,7 @@ class _TabScreenState extends State<TabScreen> {
       "longitude": _currentPosition.longitude.toString(),
       "radius": widget.user.radius ?? "10",
     }).then((res) {
+      if (!mounted) return;
       setState(() {
         var extractdata = json.decode(res.body);
         data = extractdata["jobs"];
@@ -358,7 +360,7 @@ class _TabScreenState extends State<TabScreen> {
   }
 
   void _onJobDetail(
-      String jobid,
+       String jobid,
       String jobprice,
       String jobdesc,
       String jobowner,
@@ -375,17 +377,18 @@ class _TabScreenState extends State<TabScreen> {
         jobid: jobid,
         jobtitle: jobtitle,
         jobowner: jobowner,
-        jobdes: jobdesc,
+        jobdesc: jobdesc,
         jobprice: jobprice,
         jobtime: jobtime,
         jobimage: jobimage,
         jobworker: null,
         joblat: joblatitude,
         joblon: joblongitude,
-        jobrating:jobrating );
+        jobrating: jobrating);
     //print(data);
-    
-    Navigator.push(context, SlideRightRoute(page: JobDetail(job: job, user: widget.user)));
+
+    Navigator.push(
+        context, SlideRightRoute(page: JobDetail(job: job, user: widget.user)));
   }
 
   void _onJobDelete() {

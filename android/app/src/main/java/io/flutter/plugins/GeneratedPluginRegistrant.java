@@ -8,6 +8,8 @@ import io.flutter.plugins.imagepicker.ImagePickerPlugin;
 import com.lyokone.location.LocationPlugin;
 import com.baseflow.location_permissions.LocationPermissionsPlugin;
 import io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin;
+import io.flutter.plugins.urllauncher.UrlLauncherPlugin;
+import io.flutter.plugins.webviewflutter.WebViewFlutterPlugin;
 
 /**
  * Generated file. Do not edit.
@@ -24,6 +26,8 @@ public final class GeneratedPluginRegistrant {
     LocationPlugin.registerWith(registry.registrarFor("com.lyokone.location.LocationPlugin"));
     LocationPermissionsPlugin.registerWith(registry.registrarFor("com.baseflow.location_permissions.LocationPermissionsPlugin"));
     SharedPreferencesPlugin.registerWith(registry.registrarFor("io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin"));
+    UrlLauncherPlugin.registerWith(registry.registrarFor("io.flutter.plugins.urllauncher.UrlLauncherPlugin"));
+    WebViewFlutterPlugin.registerWith(registry.registrarFor("io.flutter.plugins.webviewflutter.WebViewFlutterPlugin"));
   }
 
   private static boolean alreadyRegisteredWith(PluginRegistry registry) {

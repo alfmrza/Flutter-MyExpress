@@ -29,7 +29,7 @@
         <compilerSettings />
         <compilerArguments>
           <option name="destination" value="$MODULE_DIR$/../../build/app/tmp/kotlin-classes/debug" />
-          <option name="classpath" value="$USER_HOME$/Developer/flutter/bin/cache/artifacts/engine/android-arm64/flutter.jar:/Users/alifmirzaandriyanto/Desktop/Project/my_express/build/app/intermediates/flutter/debug/libs.jar:/Users/alifmirzaandriyanto/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.10/4d147bf43060dc43d61b096e24da1e67dfe0c032/kotlin-stdlib-jdk7-1.3.10.jar:/Users/alifmirzaandriyanto/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.10/b178c1501609c6e4ee8be635513cb023a466457d/kotlin-stdlib-1.3.10.jar:/Users/alifmirzaandriyanto/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.10/1b19d99229dcedad7caf50534dce38fe82845269/kotlin-stdlib-common-1.3.10.jar:/Users/alifmirzaandriyanto/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/Users/alifmirzaandriyanto/Library/Android/sdk/platforms/android-28/android.jar:/Users/alifmirzaandriyanto/Library/Android/sdk/build-tools/28.0.3/core-lambda-stubs.jar" />
+          <option name="classpath" value="$MODULE_DIR$/../../build/app/intermediates/flutter/debug/libs.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/2f655d7c607667c676580d5cf0fe82fa/jetified-flutter_embedding_debug-1.0.0-2994f7e1e682039464cb25e31a78b86a3c59b695.jar:/Users/alifmirzaandriyanto/.gradle/caches/modules-2/files-2.1/io.flutter/armeabi_v7a_debug/1.0.0-2994f7e1e682039464cb25e31a78b86a3c59b695/d5ed9d33700c5090d1a50a09a4722cd362b3d8a7/armeabi_v7a_debug-1.0.0-2994f7e1e682039464cb25e31a78b86a3c59b695.jar:/Users/alifmirzaandriyanto/.gradle/caches/modules-2/files-2.1/io.flutter/arm64_v8a_debug/1.0.0-2994f7e1e682039464cb25e31a78b86a3c59b695/e662fbe7ee33d9ebf8663cc3da1fc097b649e94c/arm64_v8a_debug-1.0.0-2994f7e1e682039464cb25e31a78b86a3c59b695.jar:/Users/alifmirzaandriyanto/.gradle/caches/modules-2/files-2.1/io.flutter/x86_debug/1.0.0-2994f7e1e682039464cb25e31a78b86a3c59b695/79a6dde4c4dc7171de59ecd5972ea1675426b881/x86_debug-1.0.0-2994f7e1e682039464cb25e31a78b86a3c59b695.jar:/Users/alifmirzaandriyanto/.gradle/caches/modules-2/files-2.1/io.flutter/x86_64_debug/1.0.0-2994f7e1e682039464cb25e31a78b86a3c59b695/89c9b31ba3a0b1bf40695890a62bef6fb3aae50f/x86_64_debug-1.0.0-2994f7e1e682039464cb25e31a78b86a3c59b695.jar:/Users/alifmirzaandriyanto/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-java8/2.0.0/52cb9efc663d8bebc82f8979a7da30938bd05611/lifecycle-common-java8-2.0.0.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/6ea2fc2ff97e8aa48e77914ac4a4fa36/jetified-play-services-location-16.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/1dd2f12dd3bcaeeaa6ad9eba3bc28c2d/play-services-base-17.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/3a069c0947fc77ca9432ff0d871c9edc/play-services-places-placereport-16.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/aa62391d5791890c95dc403ddc8985a7/play-services-tasks-17.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/4dd46d05d0cb696e4a72ebcdf52fc8d9/jetified-play-services-basement-17.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/f764bdd9e8401477ba44f16871b802af/fragment-1.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/a589b2d860adf6406be1f06ff649fe20/legacy-support-core-ui-1.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/b3c44f54690ad76286ac45c1c14538b2/legacy-support-core-utils-1.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/602697c68e2437fc2682f84e119867fe/loader-1.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/bb3a10bf1770f2d4bf59ad7362ed7e0f/viewpager-1.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/ca05799081e35ec8803a442ce25b59a0/coordinatorlayout-1.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/2a850c13b8473c559fb74f284f5239cf/drawerlayout-1.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/f46a2285cd0910e2f40ad22cb4ee42e8/slidingpanelayout-1.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/b4bc4b4e75b2589f22605a2eb5b44236/customview-1.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/2d1b36fef61cc819aa34924ae764db78/swiperefreshlayout-1.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/d25d3665e00ad9cfbb76635b6ca8af3b/asynclayoutinflater-1.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/836331bfc1478e14cf7c246d0b7c73c1/core-1.0.2-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/c6577633f5a7494ccab1e58106c7a78d/lifecycle-runtime-2.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/bcfb5e4bbb82c1f94fa4079bb7792846/lifecycle-livedata-2.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/8d79bc70f6e7fe5e1630666273a91d7b/lifecycle-livedata-core-2.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.0.0/e070ffae07452331bc5684734fce6831d531785c/lifecycle-common-2.0.0.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/27cd663e521795ddc9c62a333ce55d85/core-runtime-2.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.0.0/bb21b9a11761451b51624ac428d1f1bb5deeac38/core-common-2.0.0.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/ab96188145eb180a935e7fb73741c4f7/lifecycle-viewmodel-2.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/0b47edb70954d941ba9bac90a35121e4/versionedparcelable-1.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.0.0/42858b26cafdaa69b6149f45dfc2894007bc2c7a/collection-1.0.0.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/ce354061bcf8d5e38feadce9a9463c5d/interpolator-1.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/675870f8c67148bcd21ceb33810c7bb7/cursoradapter-1.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/852ee5ec6254c3015dea0bf138b8cf92/documentfile-1.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/d590b17f9c24d2b94f7be301f23a9ddf/localbroadcastmanager-1.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/transforms-2/files-2.1/02685fcb5f558f7b1131e1b62dd5772e/print-1.0.0-api.jar:/Users/alifmirzaandriyanto/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.1.0/e3a6fb2f40e3a3842e6b7472628ba4ce416ea4c8/annotation-1.1.0.jar:/Users/alifmirzaandriyanto/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.10/4d147bf43060dc43d61b096e24da1e67dfe0c032/kotlin-stdlib-jdk7-1.3.10.jar:/Users/alifmirzaandriyanto/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.10/b178c1501609c6e4ee8be635513cb023a466457d/kotlin-stdlib-1.3.10.jar:/Users/alifmirzaandriyanto/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.10/1b19d99229dcedad7caf50534dce38fe82845269/kotlin-stdlib-common-1.3.10.jar:/Users/alifmirzaandriyanto/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/Users/alifmirzaandriyanto/Library/Android/sdk/platforms/android-28/android.jar:/Users/alifmirzaandriyanto/Library/Android/sdk/build-tools/28.0.3/core-lambda-stubs.jar" />
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
           <option name="moduleName" value="app_debug" />
@@ -138,7 +138,6 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 28 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.android.support:support-annotations:27.1.1@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.12@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-integration:1.3@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-library:1.3@jar" level="project" />
@@ -147,19 +146,63 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.squareup:javawriter:2.1.1@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: javax.inject:javax.inject:1@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.code.findbugs:jsr305:2.0.1@jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.android.support.test.espresso:espresso-core:3.0.2@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.android.support.test:runner:1.0.2@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.android.support.test:monitor:1.0.2@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.android.support.test.espresso:espresso-idling-resource:3.0.2@aar" level="project" />
-    <orderEntry type="library" name="Gradle: __local_aars__:/Users/alifmirzaandriyanto/Developer/flutter/bin/cache/artifacts/engine/android-arm64/flutter.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.ext:junit:1.1.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.espresso:espresso-core:3.1.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:runner:1.1.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:core:1.2.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:monitor:1.2.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.espresso:espresso-idling-resource:3.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:/Users/alifmirzaandriyanto/Desktop/Project/my_express/build/app/intermediates/flutter/debug/libs.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: io.flutter:flutter_embedding_debug:1.0.0-2994f7e1e682039464cb25e31a78b86a3c59b695@jar" level="project" />
+    <orderEntry type="library" name="Gradle: io.flutter:armeabi_v7a_debug:1.0.0-2994f7e1e682039464cb25e31a78b86a3c59b695@jar" level="project" />
+    <orderEntry type="library" name="Gradle: io.flutter:arm64_v8a_debug:1.0.0-2994f7e1e682039464cb25e31a78b86a3c59b695@jar" level="project" />
+    <orderEntry type="library" name="Gradle: io.flutter:x86_debug:1.0.0-2994f7e1e682039464cb25e31a78b86a3c59b695@jar" level="project" />
+    <orderEntry type="library" name="Gradle: io.flutter:x86_64_debug:1.0.0-2994f7e1e682039464cb25e31a78b86a3c59b695@jar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-common-java8:2.0.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-common:2.0.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.arch.core:core-common:2.0.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.collection:collection:1.0.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.annotation:annotation:1.1.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.10@jar" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.10@jar" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.10@jar" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-location:16.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-base:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-places-placereport:16.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-tasks:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-basement:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.fragment:fragment:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.legacy:legacy-support-core-ui:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.legacy:legacy-support-core-utils:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.loader:loader:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.viewpager:viewpager:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.coordinatorlayout:coordinatorlayout:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.drawerlayout:drawerlayout:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.slidingpanelayout:slidingpanelayout:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.customview:customview:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.swiperefreshlayout:swiperefreshlayout:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.core:core:1.0.2@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-runtime:2.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata:2.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.arch.core:core-runtime:2.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-viewmodel:2.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.versionedparcelable:versionedparcelable:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.interpolator:interpolator:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.cursoradapter:cursoradapter:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.documentfile:documentfile:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.print:print:1.0.0@aar" level="project" />
+    <orderEntry type="module" module-name="google_api_availability" />
+    <orderEntry type="module" module-name="geolocator" />
+    <orderEntry type="module" module-name="url_launcher" />
+    <orderEntry type="module" module-name="webview_flutter" />
+    <orderEntry type="module" module-name="google_maps_flutter" />
+    <orderEntry type="module" module-name="location_permissions" />
     <orderEntry type="module" module-name="shared_preferences" />
-    <orderEntry type="module" module-name="permission_handler" />
+    <orderEntry type="module" module-name="location" />
     <orderEntry type="module" module-name="image_picker" />
-    <orderEntry type="module" module-name="path_provider" />
   </component>
 </module>

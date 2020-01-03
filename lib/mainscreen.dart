@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:my_express/tab2.dart';
 import 'package:my_express/user.dart';
 import 'package:my_express/tab1.dart';
+import 'package:my_express/tab4.dart';
 
 
 class MainScreen extends StatefulWidget {
@@ -23,10 +25,12 @@ class _MainScreenState extends State<MainScreen> {
     super.initState();
     tabs = [
       TabScreen(user: widget.user),
+      TabScreen2(user: widget.user),
+      TabScreen4(user: widget.user),
     ];
   }
 
-  String $pagetitle = "MyExpress Driver";
+  String $pagetitle = "MyExpress";
 
   onTapped(int index) {
     setState(() {
@@ -38,7 +42,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     //SystemChrome.setEnabledSystemUIOverlays([]);
     SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: Colors.green[300]));
+        SystemUiOverlayStyle(statusBarColor: Color.fromRGBO(61, 168, 134, 1)));
     return Scaffold(
       body: tabs[currentTabIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -49,15 +53,11 @@ class _MainScreenState extends State<MainScreen> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            title: Text("Jobs Completed"),
+            title: Text("Requests"),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.list, ),
-            title: Text("New Job"),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.event, ),
-            title: Text("Payment"),
+            icon: Icon(Icons.search),
+            title: Text("New Request"),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person, ),
